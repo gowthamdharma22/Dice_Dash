@@ -1,38 +1,123 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;1,300&family=Titillium+Web:wght@300&display=swap');
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background: url("/public/img/background.gif");
+  background-size: cover;
+  padding: 20px;
+  font-family: 'Karla', sans-serif;
+}
+main{
+  background-color: white;
+  margin: auto;
+  width: 700px;
+  padding: 10px;
+  height: 500px;
+  margin-top: 10%; 
+  border-radius: 8px;
+}
+.b-score{
+  position: relative;
+  left: 10px;
+  font-size: 15px;
+  font-family: 'IBM Plex Mono', monospace;
+  margin-bottom: -15px;
+}
+.score{
+  position: relative;
+  left: 10px;
+  font-size: 15px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.name{
+  font-family: 'IBM Plex Mono', monospace;
+  position: relative;
+  top:-67px;
+  left: 90%;
+}
+.title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 35px;
+  margin: 0;
+  top: -5px;
+  position: relative;
+  left: 27%;
+}
+.instructions {
+  font-family: 'Titillium Web', sans-serif;
+  width: 530px;
+  font-size: 17px;
+  position: relative;
+  left: 13%;
+  top: -5px;
+  margin-bottom: -100px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-cont{
+  display: grid;
+  grid-template: auto auto / repeat(5,1fr);
+  margin-left: 10px;
+  gap:20px;
+  padding: 120px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.die-face {
+  height: 50px;
+  width: 50px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  cursor: pointer;
+  background-color: white;
+}
+
+.die-num {
+  font-size: 2rem;
+}
+.app-btn{
+  position: relative;
+  font-family: 'IBM Plex Mono', monospace;
+  width: 200px;
+  height: 60px;
+  left: 34.8%;
+  right: 30%;
+  bottom: 17%;
+  font-size: 1.4rem;
+  letter-spacing: 1.5px;
+  font-weight: bold;
   color: white;
+  background: #2a1edb;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.app-btn:focus {
+  outline: none;
+}
+.app-btn:active {
+  box-shadow: inset 5px 5px 10px -3px rgb(255, 255, 255);
+}
+.app-btn:hover{
+  font-size: 1.6rem;
+  background-color: #6e66dd;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width:1450px) {
+  main{
+    position: relative;
+    left :20%;
+    margin: auto;
+    margin-top: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  body{
+    background: url("/public/img/background.gif");
+    background-repeat: no-repeat;
+    background-size: 10000px;
   }
 }
